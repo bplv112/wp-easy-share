@@ -95,8 +95,9 @@ class Wes_Admin {
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
-
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wes-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( 'jquery-ui-sortable' );
+		
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wes-admin.js', array( 'jquery', 'jquery-ui-sortable' ), $this->version, false );
 
 	}
 

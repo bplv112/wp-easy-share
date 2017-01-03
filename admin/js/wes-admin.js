@@ -1,5 +1,4 @@
 (function( $ ) {
-	'use strict';
 
 	/**
 	 * All of the code for your admin-facing JavaScript source
@@ -28,5 +27,28 @@
 	 * Although scripts in the WordPress core, Plugins and Themes may be
 	 * practising this, we should strive to set a better example in our own work.
 	 */
+$( function() {
+    $( "#wes-sortable" ).sortable({
+    	axis: 'y',
+        containment: "parent",
+    	update: function( event, ui ) {
+    		var profile_array = [];
+	        $('.wes-option-wrapper input[type="checkbox"]').each(function(){
+	        profile_array.push($(this).attr('data-key')) ;
+	        });
+	        var social_networks_orders = profile_array.join(',');
+	        $('#wes_social_order').val(social_networks_orders);
+    	}
+    });
+  });
+	 $('.wes-tab-trigger').click(function(){
+           $('.wes-tab-trigger').removeClass('nav-tab-active');
+           $(this).addClass('nav-tab-active');
+           var configuration = $(this).data('configuration');
+           $('.wes-configurations').hide();
+           $('.wes-'+configuration+'-configurations').show();
+    	});
+
+
 
 })( jQuery );

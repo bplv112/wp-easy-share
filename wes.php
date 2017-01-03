@@ -29,7 +29,11 @@
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
-
+define( 'WES_FILE_PATH', __FILE__ );
+define( 'WES_BASE_PATH', dirname( __FILE__ ) );
+define( 'WES_FILE_URL', plugins_url( '', __FILE__ ) );
+define( 'WES_IMG_URL', WES_FILE_URL.'/admin/images/' );
+define( 'WES_VERSION', '1.0.0' );
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-wes-activator.php

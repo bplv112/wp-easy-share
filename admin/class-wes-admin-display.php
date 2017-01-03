@@ -34,7 +34,271 @@
 
  	public function __construct(  ) {
 
-
-
+ 		add_action( 'admin_menu', array( $this, 'add_plugin_page' ) );
+        add_action( 'admin_init', array( $this, 'page_init' ) );
 	}
+
+	/**
+	 *		
+	 * Initialize plugin page
+	 *
+	 * @since 1.0.0
+	 */
+
+	public function add_plugin_page()
+    {
+        // This page will be under "Settings"
+        add_users_page(
+            'Settings Admin', 
+            'Social Share', 
+            'manage_options', 
+            'social-share-settings', 
+            array( $this, 'create_admin_page' )
+        );
+    }
+
+
+    /**
+     * Options page callback
+     *
+     * 
+     */
+   
+    public function create_admin_page()
+    {
+      require_once WES_BASE_PATH . '/admin/class-wes-meta-tabs.php';
+      ?>
+        <div class="wrap">
+          <div class="wes-settings wes-settings-boxed">
+            <h1><?php _e('WP Easy Share Settings', 'wes'); ?></h1>
+            <form method="post" action="options.php">
+            <?php settings_fields( 'wes-settings-group' ); ?>
+            <?php do_settings_sections( 'wes-settings-group' ); ?>
+            
+                    <?php 
+                        $tab_args = array(
+                            'container_id' => 'wes-setting-control',
+                            'content_wrap_class' => 'wes-setting-wrap',
+                            'tabs' => array(
+                                array(
+                                    'id' => 'basic',
+                                    'title' => __( 'Basic Settings', 'wes' ),
+                                    'is_active' => true,
+                                    'content' => self::wes_tab('basic')
+                                ),  
+                                // array(
+                                //     'id' => 'appearance',
+                                //     'title' => __( 'Appearance', 'wes' ),
+                                //     'is_active' => false,
+                                //     'content' => self::wes_tab('appearance')
+                                // ), 
+                                // array(
+                                //     'id' => 'other-settings',
+                                //     'title' => __( 'Other Settings', 'wes' ),
+                                //     'is_active' => false,
+                                //     'content' => self::wes_tab('advanced')
+                                // ),  
+                            )           
+                        );
+                        Wes_Meta_Tabs::create( $tab_args )
+                    ?>      
+             <?php submit_button(); ?>
+            </form>
+          </div>
+        </div>
+      <?php
+    }
+    /**
+     * Init the settings api fields
+     *
+     *
+     * @since 1.0.0
+     */
+
+     public function page_init()
+    {        
+
+        /**
+         * Basic Settings
+         * 
+         */
+        register_setting( 'wes-settings-group', 'wes_enable_social', array($this, 'sanitize_checkbox'));
+        register_setting( 'wes-settings-group', 'wes_social_order', array($this, 'sanitize_sortable'));
+
+        // /**
+        //  * Role settings
+        //  * 
+        //  * Template settings
+        //  * 
+        //  */
+        // register_setting( 'wes-settings-group', 'ab_template', array($this,'sanitize_text') );
+
+        // register_setting( 'wes-settings-group', 'ab_select_roles', array($this,'sanitize_text'));
+        
+        // register_setting( 'wes-settings-group', 'ab_disable_font_awesome', array($this, 'sanitize_checkbox')  );
+
+        // register_setting( 'wes-settings-group', 'ab_all_post_types', array($this, 'sanitize_checkbox')  );
+        
+        // register_setting( 'wes-settings-group', 'ab_select_post_types', array($this,'sanitize_text'));
+        
+        // register_setting( 'wes-settings-group', 'ab_enable_social_users', array($this, 'sanitize_checkbox') );
+
+        // /**
+        //  * Appearance Settings
+        //  * 
+        //  */
+   
+        // register_setting( 'wes-settings-group', 'ab_custom_css', array($this,'sanitize_css') );
+
+        // register_setting( 'wes-settings-group', 'ab_title', array($this,'sanitize_text') );
+
+        // register_setting( 'wes-settings-group', 'ab_margin_top', array($this, 'sanitize_value') );
+
+        // register_setting( 'wes-settings-group', 'ab_margin_bottom', array($this, 'sanitize_value') );
+    
+    }
+
+    /**
+     *
+     *  Function to sanitize checkbox
+     * 
+     *  @param $input [int]
+     *   
+     *  @since 1.0.0
+     */
+    public function sanitize_checkbox($input){
+
+    	if(is_array($input)){
+	        $new_input = array();
+	        foreach ($input as $key => $value) {   
+	          $new_input[$key] = absint( $value ) ;
+	        }
+	    }
+	    else{
+        	$new_input = absint($input);
+	    	
+	    }
+
+        return $new_input;
+
+    } 
+    /**
+     *
+     *  Function to sanitize checkbox
+     * 
+     *  @param $input [int]
+     *   
+     *  @since 1.0.0
+     */
+    public function sanitize_sortable($input){
+    	$input = explode( ',', $input );
+    	if(is_array($input)){
+	        $new_input = array();
+	        foreach ($input as $key => $value) {   
+	          $new_input[$key] = esc_html( $value ) ;
+	        }
+	    }
+	    else{
+        	$new_input = esc_html($input);
+	    	
+	    }
+
+        return $new_input;
+
+    } 
+
+    /**
+     *
+     *  Function to sanitize text
+     * 
+     *  @param $input [raw text]
+     *   
+     *  @since 1.0.0
+     */
+
+    public function sanitize_text($input){
+
+      if(is_array($input)){
+        $new_input = array();
+        foreach ($input as $key => $value) {   
+          $new_input[$key] = esc_html( $value ) ;
+
+        }
+      }
+      else{
+        $new_input = esc_html($input);
+
+      }
+        return $new_input;
+
+    }  
+
+    /**
+     *
+     *  Function to sanitize URL
+     * 
+     *  @param $input [Raw URL]
+     *   
+     *  @since 1.0.0
+     */
+
+    public function sanitize_url($input){
+        $input = esc_url_raw($input);
+        return $input;
+
+    }
+
+    /**
+     *
+     *  Function to sanitize Number 
+     * 
+     *  @param $input [Negative or postive number ]
+     *   
+     *  @since 1.0.0
+     */
+
+    public function sanitize_value($input){
+
+        $input = (int) filter_var($input, FILTER_SANITIZE_NUMBER_INT);
+        return $input;
+    } 
+
+    /**
+     *
+     *  Function to sanitize CSS
+     * 
+     *  @param $input [raw input]
+     *   
+     *  @since 1.0.0
+     */
+
+    public function sanitize_css($input){
+        $input = wp_strip_all_tags($input);
+        return $input;
+
+    } 
+
+    public function wes_tab($type = ''){
+        $data= '';
+        switch ($type) {
+            case "basic":
+                  ob_start();
+                  include_once WES_BASE_PATH . '/admin/partials/wes-basic-tab.php';
+                  $data .= ob_get_contents();
+                  ob_end_clean();
+
+            break;
+            default:
+             $data = __("No settings Found, please make sure the params are passed correctly.", 'wes' );
+        }
+
+        return $data;
+      
+    } 
+
  }
+
+$this->loader = new Wes_Loader();
+$plugin_admin = new Wes_Admin( $this->get_plugin_name(), $this->get_version() );
+$backend = new Wes_Admin_Display();
+$this->loader->add_action( 'plugins_loaded', $plugin_admin, $backend);
