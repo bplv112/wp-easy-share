@@ -1,32 +1,25 @@
-(function( $ ) {
-	'use strict';
 
-	/**
-	 * All of the code for your public-facing JavaScript source
-	 * should reside in this file.
-	 *
-	 * Note: It has been assumed you will write jQuery code here, so the
-	 * $ function reference has been prepared for usage within the scope
-	 * of this function.
-	 *
-	 * This enables you to define handlers, for when the DOM is ready:
-	 *
-	 * $(function() {
-	 *
-	 * });
-	 *
-	 * When the window is loaded:
-	 *
-	 * $( window ).load(function() {
-	 *
-	 * });
-	 *
-	 * ...and/or other possibilities.
-	 *
-	 * Ideally, it is not considered best practise to attach more than a
-	 * single DOM-ready or window-load handler for a particular page.
-	 * Although scripts in the WordPress core, Plugins and Themes may be
-	 * practising this, we should strive to set a better example in our own work.
-	 */
+// function from https://halgatewood.com/how-to-customize-the-pin-it-button-for-pinterest
+function pinIt()
+{
+  var e = document.createElement('script');
+  e.setAttribute('type','text/javascript');
+  e.setAttribute('charset','UTF-8');
+  e.setAttribute('src','https://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);
+  document.body.appendChild(e);
+}
 
-})( jQuery );
+function apss_open_in_popup_window(event, url){
+    event.preventDefault();
+    window.open(url, 'fdadas', 'toolbars=0,width=640,height=320,left=200,top=200,scrollbars=1,resizable=1');
+}
+
+jQuery(document).ready(function ($) {
+    var shortcode_profile_array = [];
+    $('.apss-count').each(function () {
+        var social_detail = $(this).attr('data-social-detail');
+        if ($.inArray(social_detail, shortcode_profile_array) == -1) {
+            shortcode_profile_array.push(social_detail);
+        }
+    });
+});

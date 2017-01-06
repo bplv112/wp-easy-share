@@ -48,12 +48,14 @@
 	public function add_plugin_page()
     {
         // This page will be under "Settings"
-        add_users_page(
+        add_menu_page(
             'Settings Admin', 
-            'Social Share', 
+            'WP Easy Social Share', 
             'manage_options', 
             'social-share-settings', 
-            array( $this, 'create_admin_page' )
+            array( $this, 'create_admin_page' ),
+            '',
+            80
         );
     }
 
@@ -83,21 +85,21 @@
                                 array(
                                     'id' => 'basic',
                                     'title' => __( 'Basic Settings', 'wes' ),
-                                    'is_active' => true,
+                                    'is_active' => false,
                                     'content' => self::wes_tab('basic')
                                 ),  
-                                // array(
-                                //     'id' => 'appearance',
-                                //     'title' => __( 'Appearance', 'wes' ),
-                                //     'is_active' => false,
-                                //     'content' => self::wes_tab('appearance')
-                                // ), 
-                                // array(
-                                //     'id' => 'other-settings',
-                                //     'title' => __( 'Other Settings', 'wes' ),
-                                //     'is_active' => false,
-                                //     'content' => self::wes_tab('advanced')
-                                // ),  
+                                array(
+                                    'id' => 'adv',
+                                    'title' => __( 'Advanced', 'wes' ),
+                                    'is_active' => false,
+                                    'content' => self::wes_tab('adv')
+                                ), 
+                                array(
+                                    'id' => 'layout-settings',
+                                    'title' => __( 'Layout Settings', 'wes' ),
+                                    'is_active' => true,
+                                    'content' => self::wes_tab('layout')
+                                ),  
                             )           
                         );
                         Wes_Meta_Tabs::create( $tab_args )
@@ -131,15 +133,17 @@
         //  * Template settings
         //  * 
         //  */
-        // register_setting( 'wes-settings-group', 'ab_template', array($this,'sanitize_text') );
+        register_setting( 'wes-settings-group', 'wes_select_post_types', array($this,'sanitize_text') );
 
-        // register_setting( 'wes-settings-group', 'ab_select_roles', array($this,'sanitize_text'));
+        register_setting( 'wes-settings-group', 'wes_all_post_types', array($this,'sanitize_checkbox'));
         
-        // register_setting( 'wes-settings-group', 'ab_disable_font_awesome', array($this, 'sanitize_checkbox')  );
+        register_setting( 'wes-settings-group', 'wes_font_awesome', array($this, 'sanitize_checkbox')  );
 
-        // register_setting( 'wes-settings-group', 'ab_all_post_types', array($this, 'sanitize_checkbox')  );
+        register_setting( 'wes-settings-group', 'wes_new_tab', array($this, 'sanitize_checkbox')  );
         
-        // register_setting( 'wes-settings-group', 'ab_select_post_types', array($this,'sanitize_text'));
+        register_setting( 'wes-settings-group', 'wes_disable_auto_code', array($this, 'sanitize_checkbox')  );
+        
+        register_setting( 'wes-settings-group', 'wes_social_title', array($this,'sanitize_text'));
         
         // register_setting( 'wes-settings-group', 'ab_enable_social_users', array($this, 'sanitize_checkbox') );
 
@@ -148,7 +152,7 @@
         //  * 
         //  */
    
-        // register_setting( 'wes-settings-group', 'ab_custom_css', array($this,'sanitize_css') );
+        register_setting( 'wes-settings-group', 'wes_template', array($this,'sanitize_text') );
 
         // register_setting( 'wes-settings-group', 'ab_title', array($this,'sanitize_text') );
 
@@ -217,20 +221,18 @@
      */
 
     public function sanitize_text($input){
-
       if(is_array($input)){
         $new_input = array();
         foreach ($input as $key => $value) {   
           $new_input[$key] = esc_html( $value ) ;
-
         }
       }
       else{
         $new_input = esc_html($input);
 
       }
-        return $new_input;
 
+        return $new_input;
     }  
 
     /**
@@ -284,6 +286,20 @@
             case "basic":
                   ob_start();
                   include_once WES_BASE_PATH . '/admin/partials/wes-basic-tab.php';
+                  $data .= ob_get_contents();
+                  ob_end_clean();
+
+            break;            
+            case "adv":
+                  ob_start();
+                  include_once WES_BASE_PATH . '/admin/partials/wes-adv-tab.php';
+                  $data .= ob_get_contents();
+                  ob_end_clean();
+
+            break;            
+            case "layout":
+                  ob_start();
+                  include_once WES_BASE_PATH . '/admin/partials/wes-layout-tab.php';
                   $data .= ob_get_contents();
                   ob_end_clean();
 

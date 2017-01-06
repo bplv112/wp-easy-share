@@ -74,6 +74,8 @@ class Wes_Admin {
 		 */
 
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/wes-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( 'fontawesome', WES_FILE_URL .'/public/css/font-awesome-4.6.3/css/font-awesome.css', array(), '4.6.3', 'all'  );
+		wp_enqueue_style( 'select2-css', plugin_dir_url( __FILE__ ) . 'css/select2.css', array(), $this->version);
 
 	}
 
@@ -98,6 +100,8 @@ class Wes_Admin {
 		wp_enqueue_script( 'jquery-ui-sortable' );
 		
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wes-admin.js', array( 'jquery', 'jquery-ui-sortable' ), $this->version, false );
+		
+		wp_enqueue_script( 'select2', plugin_dir_url( __FILE__ ) . 'js/select2.js', array( 'jquery'), '', false );
 
 	}
 

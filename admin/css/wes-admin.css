@@ -3,11 +3,269 @@
  * included in this file.
  */
 
- .wes-option-wrapper {
-    background-color: #f1f1f1;
+
+.switch {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 70px;
+    height: 30px;
+    padding: 3px;
+    margin: 5px 10px 10px 0;
+    background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);
+    background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);
+    border-radius: 18px;
+    box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+.switch-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.switch-label {
+    position: relative;
+    display: block;
+    height: inherit;
+    font-size: 10px;
+    text-transform: uppercase;
+    background: #eceeef;
+    border-radius: inherit;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+}
+.switch-label:before, .switch-label:after {
+    position: absolute;
+    top: 50%;
+    margin-top: -.5em;
+    line-height: 1;
+    -webkit-transition: inherit;
+    -moz-transition: inherit;
+    -o-transition: inherit;
+    transition: inherit;
+}
+.switch-label:before {
+    font-family: "dashicons";
+    content: "\f335";
+    font-size:27px;
+    right: 3px;
+    color: #aaaaaa;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+.switch-label:after {
+    font-family: "dashicons";
+    content: "\f147";
+    font-size:25px;
+    left: 7px;
+    color: #FFFFFF;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+.switch-input:checked ~ .switch-label {
+    background: rgb(0, 115, 170);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.switch-input:checked ~ .switch-label:before {
+    opacity: 0;
+}
+.switch-input:checked ~ .switch-label:after {
+    opacity: 1;
+}
+.switch-handle {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
+    background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
+    border-radius: 100%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.switch-handle:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -6px 0 0 -6px;
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(to bottom, #eeeeee, #FFFFFF);
+    background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);
+    border-radius: 6px;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+}
+.switch-input:checked ~ .switch-handle {
+    left: 44px;
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+ 
+/* Transition
+========================== */
+.switch-label, .switch-handle {
+    transition: All 0.3s ease;
+    -webkit-transition: All 0.3s ease;
+    -moz-transition: All 0.3s ease;
+    -o-transition: All 0.3s ease;
+}
+
+
+
+/*
+ * 
+ * Admin CSS
+ *
+ */
+
+.wes-settings-boxed {
+    width: 70%;
+    padding: 10px;
+    margin: 20px;
+    margin-left: 0%;
+    float: left;
+}
+
+.wes-settings.wes-settings-boxed h1 {
+    padding: 6px 5px;
+    background: #fafafa;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+.wrap {
+    margin: 10px 20px 0 2px;
+}
+
+.wes-option-wrapper {
+    background-color: #ffffff;
     border: 1px solid #e5e5e5;
     border-radius: 5px;
-    line-height: 26px;
+    line-height: 30px;
     margin: 0 0 10px;
     width: 43%;
+    cursor: move;
+}
+.wes-settings-boxed form {
+    background: #fff;
+    padding: 15px 15px 0;
+    border: 1px solid #ccc;
+}
+.nav-tab-wrapper, .wrap h2.nav-tab-wrapper, h1.nav-tab-wrapper {
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding-top: 9px;
+    padding-bottom: 0;
+    line-height: inherit;
+}
+.wes-setting-wrap {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background: #f1f1f1;
+}
+.wes-desc,span.description {
+    color: #777;
+}
+label.wes-switch-label{
+    width: 35%;
+}
+label.wes-layout-label{
+    width: 25%;
+}
+label.wes-switch-label,
+.wes-layout-label{
+    display: inline-flex;
+    font-weight: 900;
+    font-size: 13px;
+}
+
+.wes-layout-wrap {
+    padding: 20px 20px 0px 23px;
+}
+div#wes-sortable {
+    padding: 25px 0px 0px 25px;
+}
+span.left-icon {
+    padding: 10px;
+}
+.social-name {
+    padding: 0 20px;
+    width: auto;
+}
+.wes-option-wrapper label input[type="checkbox"] {
+    float: right;
+    margin-top: 7px;
+    margin-right: 10px;
+}
+
+.clearfix:after, .clearfix:before {
+    display: table;
+    content: "";
+}
+
+
+/*layout*/
+
+.wes-layout-select input[type=radio]{
+    display: none;
+}
+
+.wes-layout-select span {
+    background: #0073AA !important;
+    color: #fff;
+    display: block;
+    padding: 2px 10px;
+    margin-top: -4px;
+    font-weight: normal;
+    width: 88px;
+    text-align: center;
+}
+.wes-layout-select span a {
+    color: #ffe9d1;
+    text-decoration: none;
+    cursor: pointer;
+}
+.wes-layout-select span a:hover {
+    color: #00BCD4;
+}
+.wes-layout-select input{
+    display: none;
+}
+.wes-layout-select input[type=radio] + label img {
+  color: #ccc;
+  font-style: italic;
+  border: 4px solid #ddd;
+  opacity: 0.6;
+  height: 100px;
+  width: 100px;
+}
+
+.wes-layout-select input[type=radio]:checked + label img {
+  color: #f00;
+  font-style: normal;
+  background: red;
+  border: 4px solid #bebebe;
+  opacity: 1;
+} 
+.wes-layout-select {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+    padding: 10px 10px 10px 15px;
+    margin: 5px 10px 10px 15px;
+    cursor: pointer;
+}
+.wes-layout-text {
+    padding: 10px 0px 15px 10px;
+}
+.wes-layout-text input{
+    margin-left: 27px;
+    vertical-align: middle;
+}
+.wes-layout-select-wrap {
+    padding: 10px;
+}
+i.wes-help{
+    margin-right: 10px;
 }

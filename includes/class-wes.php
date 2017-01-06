@@ -119,6 +119,9 @@ class Wes {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-wes-public.php';
 
+
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-wes-public-display.php';
+
 		/**
 		 * The class is responsible for the backend admin page
 		 */

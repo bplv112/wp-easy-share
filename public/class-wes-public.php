@@ -74,6 +74,7 @@ class Wes_Public {
 		 */
 
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/wes-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( 'fontawesome', WES_FILE_URL .'/public/css/font-awesome-4.6.3/css/font-awesome.css', array(), '4.6.3', 'all'  );
 
 	}
 

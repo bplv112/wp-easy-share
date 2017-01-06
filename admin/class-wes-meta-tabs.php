@@ -5,11 +5,11 @@
  *
  * The file controls all the tabs of different settings
  *
- * @link       http://wensolutions.com
+ * @link       http://bplv.com.np
  * @since      1.0.0
  *
- * @package    Wp_Author_Profile_Box
- * @subpackage Wp_Author_Profile_Box/includes
+ * @package    WP_Easy_Share
+ * @subpackage WP_Easy_Share/includes
  */
 
 
@@ -19,10 +19,10 @@ class Wes_Meta_Tabs{
 
 	public static function create( $args ){
 		$defaults = array(
-			'container_id' => 'ws-jquery-tab-' . rand(),
+			'container_id' => 'wes-jquery-tab-' . rand(),
 			'container_class' => "clearfix",
 			'tab_heading_class' => "nav-tab-wrapper",
-			'tab_heading_id' => "ws-jquery-tab-header-" . rand(),
+			'tab_heading_id' => "wes-jquery-tab-header-" . rand(),
 			'content_wrap_class' => '',
 			'content_wrap_id' => '',
 			'tabs' => array(),

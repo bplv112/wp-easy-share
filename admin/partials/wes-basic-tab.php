@@ -29,7 +29,7 @@
 		<?php foreach ( $order as $key => $val ) { ?>
 			<div class="wes-option-wrapper">
 				<div class="wes-option-field">
-					<label>
+					<label class="clearfix">
 						<span class="left-icon"><i class="fa fa-arrows"></i></span>
 						<span class="social-name"><?php echo $wes_icon[$val]; ?></span>
 						<input type="checkbox" data-key='<?php echo $val; ?>' name="wes_enable_social[<?php echo $val; ?>]" value="1" <?php checked($wes_social[$val],1);?>/>
