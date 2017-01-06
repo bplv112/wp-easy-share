@@ -85,7 +85,7 @@
                                 array(
                                     'id' => 'basic',
                                     'title' => __( 'Basic Settings', 'wes' ),
-                                    'is_active' => false,
+                                    'is_active' => true,
                                     'content' => self::wes_tab('basic')
                                 ),  
                                 array(
@@ -97,7 +97,7 @@
                                 array(
                                     'id' => 'layout-settings',
                                     'title' => __( 'Layout Settings', 'wes' ),
-                                    'is_active' => true,
+                                    'is_active' => false,
                                     'content' => self::wes_tab('layout')
                                 ),  
                             )           
