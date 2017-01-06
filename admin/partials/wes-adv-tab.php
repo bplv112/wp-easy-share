@@ -24,6 +24,15 @@
 		<h2> <?php _e('Select Display Options', 'wes'); ?></h2>
 	</div>
 	<div class="wes-layout-wrap">
+		<div class= "wes-auto-code">
+			<i class="wes-help fa fa-question-circle" title="Enable social share"></i>
+			<label class= "wes-switch-label"> <?php _e('Enable social share','wes'); ?></label>
+			<label class="switch">
+	        	<input type="checkbox" class="switch-input" name="wes_disable_auto_code" value="1" <?php checked( wes_option('wes_disable_auto_code'), '1' ); ?>>
+            	<span class="switch-label" data-on="On" data-off="Off"></span> 
+            	<span class="switch-handle"></span> 
+        	</label>
+		</div>
 		<div class="wes-all">
 			<i class="wes-help fa fa-question-circle" title="Disable to restrict share options to certain post types"></i>
 			<label class= "wes-switch-label"> <?php _e('Allow social share for all posts','wes'); ?></label>
@@ -34,6 +43,7 @@
         	</label>
 		</div>
 		<div class="wes-selected" id="wes_select_post">
+			<i class="wes-help fa fa-question-circle" title="Select post types"></i>
 			<label class="wes-switch-label"><?php _e('Select Post type','wes');?></label>
 			<select id="post-type-select" class= "wes-select" name="wes_select_post_types[]" multiple>
 	        	<?php foreach ($post_types as $key => $value) { ?>
@@ -64,14 +74,5 @@
             	<span class="switch-handle"></span> 
         	</label>
 		</div>		
-		<div class= "wes-auto-code">
-			<i class="wes-help fa fa-question-circle" title="Disable to use shortcodes"></i>
-			<label class= "wes-switch-label"> <?php _e('Auto insert social share','wes'); ?></label>
-			<label class="switch">
-	        	<input type="checkbox" class="switch-input" name="wes_disable_auto_code" value="1" <?php checked( wes_option('wes_disable_auto_code'), '1' ); ?>>
-            	<span class="switch-label" data-on="On" data-off="Off"></span> 
-            	<span class="switch-handle"></span> 
-        	</label>
-		</div>
 	</div>
 </div>

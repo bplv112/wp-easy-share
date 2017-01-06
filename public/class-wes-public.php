@@ -72,9 +72,46 @@ class Wes_Public {
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
+		/**
+		 * Template css
+		 */
+		if(wes_option('wes_template') == 'default'){
+			wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/wes-public.css', array(), $this->version, 'all' );
+		}
+		elseif( wes_option('wes_template') == 'one'){
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/wes-public.css', array(), $this->version, 'all' );
-		wp_enqueue_style( 'fontawesome', WES_FILE_URL .'/public/css/font-awesome-4.6.3/css/font-awesome.css', array(), '4.6.3', 'all'  );
+			wp_enqueue_style( $this->plugin_name.'layout-one', plugin_dir_url( __FILE__ ) . 'css/wes-layout-one.css', array(), $this->version, 'all' );
+
+		}
+		else{
+			wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/wes-public.css', array(), $this->version, 'all' );
+		}
+		/**
+		 * Disable fa
+		 */
+		if(wes_option('wes_font_awesome') == 1 ) :
+			wp_enqueue_style( 'fontawesome', WES_FILE_URL .'/public/css/font-awesome-4.6.3/css/font-awesome.css', array(), '4.6.3', 'all'  );
+		endif;
+
+		/**
+		 * Template align
+		 */
+
+		if(wes_option('wes_template_align') == 'left'){
+	        $custom_css = ".wes-container, #social-platforms{ text-align: left; } ";
+        	wp_add_inline_style( $this->plugin_name, $custom_css );
+        	wp_add_inline_style( $this->plugin_name.'layout-one', $custom_css );
+		}
+		elseif (wes_option('wes_template_align') == 'right') {
+	        $custom_css = ".wes-container, #social-platforms{ text-align: right; }";
+        	wp_add_inline_style( $this->plugin_name, $custom_css );
+        	wp_add_inline_style( $this->plugin_name.'layout-one', $custom_css );
+		}
+		else{
+	        $custom_css = ".wes-container, #social-platforms{ text-align: center; }";
+        	wp_add_inline_style( $this->plugin_name, $custom_css );
+        	wp_add_inline_style( $this->plugin_name.'layout-one', $custom_css );
+		}
 
 	}
 

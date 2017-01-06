@@ -150,11 +150,7 @@ li.wes-icon-list {
 a.btn.btn-icon:active, a.btn.btn-icon:hover, a.btn.btn-icon:focus, a.btn.btn-icon:visited {
     outline: none;
 }
-ul.wes-social-icons {
-    text-align: center;
-}
 div#social-platforms h3{
-  text-align: center;
   font-size: 19px;
   font-weight: 500;
   font-family: inherit;

@@ -127,10 +127,8 @@
         register_setting( 'wes-settings-group', 'wes_enable_social', array($this, 'sanitize_checkbox'));
         register_setting( 'wes-settings-group', 'wes_social_order', array($this, 'sanitize_sortable'));
 
-        // /**
-        //  * Role settings
         //  * 
-        //  * Template settings
+        //  * Advance settings
         //  * 
         //  */
         register_setting( 'wes-settings-group', 'wes_select_post_types', array($this,'sanitize_text') );
@@ -143,22 +141,17 @@
         
         register_setting( 'wes-settings-group', 'wes_disable_auto_code', array($this, 'sanitize_checkbox')  );
         
-        register_setting( 'wes-settings-group', 'wes_social_title', array($this,'sanitize_text'));
         
-        // register_setting( 'wes-settings-group', 'ab_enable_social_users', array($this, 'sanitize_checkbox') );
 
         // /**
         //  * Appearance Settings
         //  * 
         //  */
-   
+        register_setting( 'wes-settings-group', 'wes_social_title', array($this,'sanitize_text'));
+
         register_setting( 'wes-settings-group', 'wes_template', array($this,'sanitize_text') );
-
-        // register_setting( 'wes-settings-group', 'ab_title', array($this,'sanitize_text') );
-
-        // register_setting( 'wes-settings-group', 'ab_margin_top', array($this, 'sanitize_value') );
-
-        // register_setting( 'wes-settings-group', 'ab_margin_bottom', array($this, 'sanitize_value') );
+        
+        register_setting( 'wes-settings-group', 'wes_template_align', array($this,'sanitize_text') );
     
     }
 

@@ -48,8 +48,9 @@ function wes_default_option(){
 		'wes_font_awesome'		=> 1,
 		'wes_new_tab'			=> 1,
 		'wes_disable_auto_code'	=> 1,
-		'wes_template'	=> 'default',
-		'wes_social_title'	=> 'Share it people',
+		'wes_template'			=> 'default',
+		'wes_social_title'		=> 'Share it people',
+		'wes_template_align'	=> 'left',
 
 		);
 

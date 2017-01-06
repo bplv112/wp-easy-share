@@ -1,4 +1,4 @@
-=== WP Easy Share ===
+=== WP Easy Share ( An easy social share plugin) ===
 Contributors: bplv
 Donate link: bplv.com.np
 Tags: social share counter, social share, social media share, social network share, social media, social network, share counter, social share count, social url share, social icons
@@ -12,7 +12,7 @@ WP Easy Share is your ultimate solution to your need of adding social share feat
 
 == Description ==
 
-<strong>WP Easy Share</strong> is a <strong>COMPLETELY Free WordPress plugin</strong> is your ultimate solution to your need of adding social share feature on your website.
+<strong>WP Easy Share</strong> is a <strong>COMPLETELY Free WordPress plugin</strong> and is your ultimate solution to your need of adding social share feature on your website.
 
 It is the perfect plugin for your social share problem on your website.
 Since this plugin is completely free and dynamic you can completely rely on the plugin to provide your the best social share features that you always desired.
@@ -20,6 +20,10 @@ Since this plugin is completely free and dynamic you can completely rely on the 
 Just get it done in a few minutes!
 
 `If you would like to request any features to be added on the plugin just create a thread and I will try my best to include the feature, I promise :) .`
+
+Plugin : [Homepage](http://bplv.com.np/download/wp-easy-share/)
+If you like this plugin, please [rate and review](http://wordpress.org/support/view/plugin-reviews/wp-easy-share). 
+If you have any question, suggestion or issue, please [post here](https://wordpress.org/support/plugin/wp-easy-share).
 
 == Installation ==
 

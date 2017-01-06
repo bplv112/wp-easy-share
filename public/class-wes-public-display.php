@@ -21,10 +21,6 @@ class Wes_Front{
       
        add_action( 'init', array( $this, 'wes_content_filter' ) );
 
-       // add_action( 'wp_head', array( $this, 'wes_custom_css' ) );
-
-       // add_action( 'wp_head', array( $this, 'wes_margin' ) );
-
     }
 
     public function wes_content_front( $content = null ) {
@@ -45,8 +41,7 @@ class Wes_Front{
     	else{
                 if( !empty( array_filter( wes_option('wes_enable_social') ) ) ){
 
-                    // $template = wes_option('wes_template') ;
-                    $template = 'left' ;
+                    $template = wes_option('wes_template') ;
         			$content .= self::wes_content( $post_id, esc_html($template)); 
         		}
         		else{
@@ -96,9 +91,15 @@ class Wes_Front{
         $data = '';
         $url = array();
         switch ($template) {
-            case "left":
+            case "default":
                 ob_start();
                 include_once WES_BASE_PATH . '/public/partials/wes-public-display.php';
+                $data .= ob_get_contents();
+                ob_end_clean();
+            break;            
+            case "one":
+                ob_start();
+                include_once WES_BASE_PATH . '/public/partials/wes-layout-one.php';
                 $data .= ob_get_contents();
                 ob_end_clean();
             break;

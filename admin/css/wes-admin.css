@@ -126,7 +126,7 @@
 }
 
 .wes-settings.wes-settings-boxed h1 {
-    padding: 6px 5px;
+    padding: 10px 15px;
     background: #fafafa;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -217,7 +217,7 @@ span.left-icon {
     padding: 2px 10px;
     margin-top: -4px;
     font-weight: normal;
-    width: 88px;
+    width: 163px;
     text-align: center;
 }
 .wes-layout-select span a {
@@ -236,8 +236,8 @@ span.left-icon {
   font-style: italic;
   border: 4px solid #ddd;
   opacity: 0.6;
-  height: 100px;
-  width: 100px;
+  height: auto;
+  width: 175px;
 }
 
 .wes-layout-select input[type=radio]:checked + label img {
@@ -251,9 +251,8 @@ span.left-icon {
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    width: 100px;
     padding: 10px 10px 10px 15px;
-    margin: 5px 10px 10px 15px;
+    margin: 0px 0px 0px 10px;
     cursor: pointer;
 }
 .wes-layout-text {
@@ -268,4 +267,15 @@ span.left-icon {
 }
 i.wes-help{
     margin-right: 10px;
+}
+.wes-layout-select-align {
+    display: inline-block;
+}
+.wes-layout-align {
+    padding: 30px 13px 20px 10px;
+}
+
+.wes-layout-select-align input {
+    margin-left: 27px;
+    vertical-align: middle;
 }
