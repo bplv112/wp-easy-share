@@ -41,6 +41,10 @@ This plugin provides the ability to allow anyone easily share website content (p
 No , you won't need to get any trouble regarding design and layout of the icons since we have provided inbuilt 5 beautiful icon themes.You can choose any as per your requirement.
 
 
+= There is something cool you could add... =
+
+Nice, make a post on the [Support Forum](http://wordpress.org/support/plugin/wp-easy-share "WP Child Theme Generator Support") and let us know.
+
 == Screenshots ==
 1. Backend Section of WP Social Share
 2. Frontend layout of WP Social Share

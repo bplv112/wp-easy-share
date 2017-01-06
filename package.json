@@ -1,0 +1,33 @@
+{
+  "name": "wes",
+  "version": "1.0.0",
+  "description": "=== WP Easy Share ( An easy social share plugin) === Contributors: bplv Donate link: bplv.com.np Tags: social share counter, social share, social media share, social network share, social media, social network, share counter, social share count, social url share, social icons Requires at least: 4.5 Tested up to: 4.7 Stable tag: 1.0.0 License: GPLv2 or later License URI: http://www.gnu.org/licenses/gpl-2.0.html",
+  "main": "wes.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bplv112/wes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bplv112/wes/issues"
+  },
+  "homepage": "https://github.com/bplv112/wes#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-check-dependencies": "^1.0.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-file-creator": "^0.1.3",
+    "grunt-git": "^1.0.3",
+    "grunt-install-dependencies": "^0.2.0",
+    "grunt-push-svn": "^0.2.2",
+    "grunt-svn-export": "^0.1.7",
+    "grunt-text-replace": "^0.4.0",
+    "grunt-wp-i18n": "^0.5.4"
+  }
+}
