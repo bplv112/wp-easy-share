@@ -9,7 +9,7 @@ module.exports = function(grunt) {
     'includes/**',
     'languages/**',
     'public/**',
-    '<%= pkg.main_file %>',
+    '<%= pkg.main %>',
     'readme.txt',
     'uninstall.php',
     'index.php',
@@ -167,6 +167,16 @@ module.exports = function(grunt) {
         }
       }
     },
+    wp_deploy: {
+        deploy: { 
+            options: {
+                plugin_slug: 'wes',
+                svn_url: 'https://plugins.svn.wordpress.org/wp-easy-share',
+                svn_user: 'bplv',  
+                build_dir: 'build/wp-easy-share/trunk/', //relative path to your build directory
+            },
+        }
+    },
     addtextdomain: {
       options: {
             updateDomains: true,// List of text domains to replace.
@@ -197,8 +207,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks( 'grunt-contrib-uglify' );
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-check-dependencies');
+  grunt.loadNpmTasks('grunt-wp-deploy');
 
-  grunt.registerTask( 'default', ['addtextdomain'] );
+  grunt.registerTask( 'default', ['wp_deploy'] );
   grunt.registerTask( 'minify', [ 'uglify', 'cssmin' ] );
   grunt.registerTask( 'version_number', [ 'replace:readme_txt', 'replace:plugin_file' ] );
   grunt.registerTask( 'pre_vcs', [ 'version_number', 'makepot', 'addtextdomain' ] );
@@ -208,7 +219,7 @@ module.exports = function(grunt) {
   grunt.registerTask( 'do_git', [  'gitcommit', 'gittag', 'gitpush' ] );
   grunt.registerTask( 'release', [ 'pre_vcs', 'do_svn' ] );
   grunt.registerTask( 'post_release', [ 'do_git', 'clean:post_build' ] );
-  grunt.registerTask( 'build', [ 'copy','clean:post_build'  ] );
+  grunt.registerTask( 'build', [ 'clean:post_build'  ] );
 
 };
 

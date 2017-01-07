@@ -19,7 +19,8 @@ Since this plugin is completely free and dynamic you can completely rely on the 
 
 Just get it done in a few minutes!
 
-`If you would like to request any features to be added on the plugin just create a thread and I will try my best to include the feature, I promise :) .`
+
+If you would like to request any features to be added on the plugin just create a thread and I will try my best to include the feature, I promise :) .
 
 Plugin : [Homepage](http://bplv.com.np/download/wp-easy-share/)
 If you like this plugin, please [rate and review](http://wordpress.org/support/view/plugin-reviews/wp-easy-share). 
