@@ -193,8 +193,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks( 'grunt-file-creator' );
   grunt.loadNpmTasks( 'grunt-contrib-uglify' );
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-check-dependencies');
 
-  grunt.registerTask( 'default', [''] );
+  grunt.registerTask( 'default', ['checkDependencies'] );
   grunt.registerTask( 'minify', [ 'uglify', 'cssmin' ] );
   grunt.registerTask( 'version_number', [ 'replace:readme_txt', 'replace:plugin_file' ] );
   grunt.registerTask( 'pre_vcs', [ 'version_number', 'makepot', 'addtextdomain' ] );
