@@ -20,10 +20,10 @@
 
 <div class="wes-social-networks" id="wes-social">
 	<h2>
-		<?php _e('Social Media Selector', 'wes'); ?>	
+		<?php _e('Social Media Selector', 'wp-easy-share'); ?>	
 	</h2>
 	<span class="wes-desc">
-		<?php _e('Here you can enable/disable sharing option for different social media. You can also set the order of the social icons, drag and drop to sort the order', 'wes'); ?>
+		<?php _e('Here you can enable/disable sharing option for different social media. You can also set the order of the social icons, drag and drop to sort the order', 'wp-easy-share'); ?>
 	</span>
 	<div class="wes-sortable-wrap" id="wes-sortable">
 		<?php foreach ( $order as $key => $val ) { ?>

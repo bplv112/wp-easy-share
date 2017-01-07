@@ -168,6 +168,9 @@ module.exports = function(grunt) {
       }
     },
     addtextdomain: {
+      options: {
+            updateDomains: true,// List of text domains to replace.
+        },
       target: {
         files: {
           src: [
@@ -195,7 +198,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-check-dependencies');
 
-  grunt.registerTask( 'default', ['checkDependencies'] );
+  grunt.registerTask( 'default', ['addtextdomain'] );
   grunt.registerTask( 'minify', [ 'uglify', 'cssmin' ] );
   grunt.registerTask( 'version_number', [ 'replace:readme_txt', 'replace:plugin_file' ] );
   grunt.registerTask( 'pre_vcs', [ 'version_number', 'makepot', 'addtextdomain' ] );
@@ -205,7 +208,7 @@ module.exports = function(grunt) {
   grunt.registerTask( 'do_git', [  'gitcommit', 'gittag', 'gitpush' ] );
   grunt.registerTask( 'release', [ 'pre_vcs', 'do_svn' ] );
   grunt.registerTask( 'post_release', [ 'do_git', 'clean:post_build' ] );
-  grunt.registerTask( 'build', [ 'clean:post_build'  ] );
+  grunt.registerTask( 'build', [ 'copy','clean:post_build'  ] );
 
 };
 

@@ -72,7 +72,7 @@
       ?>
         <div class="wrap">
           <div class="wes-settings wes-settings-boxed">
-            <h1><?php _e('WP Easy Share Settings', 'wes'); ?></h1>
+            <h1><?php _e('WP Easy Share Settings', 'wp-easy-share'); ?></h1>
             <form method="post" action="options.php">
             <?php settings_fields( 'wes-settings-group' ); ?>
             <?php do_settings_sections( 'wes-settings-group' ); ?>
@@ -84,19 +84,19 @@
                             'tabs' => array(
                                 array(
                                     'id' => 'basic',
-                                    'title' => __( 'Basic Settings', 'wes' ),
+                                    'title' => __( 'Basic Settings', 'wp-easy-share' ),
                                     'is_active' => true,
                                     'content' => self::wes_tab('basic')
                                 ),  
                                 array(
                                     'id' => 'adv',
-                                    'title' => __( 'Advanced', 'wes' ),
+                                    'title' => __( 'Advanced', 'wp-easy-share' ),
                                     'is_active' => false,
                                     'content' => self::wes_tab('adv')
                                 ), 
                                 array(
                                     'id' => 'layout-settings',
-                                    'title' => __( 'Layout Settings', 'wes' ),
+                                    'title' => __( 'Layout Settings', 'wp-easy-share' ),
                                     'is_active' => false,
                                     'content' => self::wes_tab('layout')
                                 ),  
@@ -298,7 +298,7 @@
 
             break;
             default:
-             $data = __("No settings Found, please make sure the params are passed correctly.", 'wes' );
+             $data = __("No settings Found, please make sure the params are passed correctly.", 'wp-easy-share' );
         }
 
         return $data;
