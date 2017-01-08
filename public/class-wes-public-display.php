@@ -75,16 +75,10 @@ class Wes_Front{
     }
 
     public function wes_content_filter() {
-        $filter = $this->get_filter_hook();
+        $filter = apply_filters( 'wes_filter', 'the_content');
         add_filter ( $filter, array($this,'wes_content_front'), 0 );
         add_filter ( $filter, array($this,'remove_empty_tags'), 100 );
 
-    }
-
-    public function get_filter_hook(  ) {
-
-        $hook = apply_filters( 'wes_filter', 'the_content');
-        return $hook;
     }
 
     public static function wes_content( $post_id, $template = ''){
