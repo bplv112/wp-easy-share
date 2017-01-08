@@ -225,7 +225,7 @@ module.exports = function(grunt) {
   grunt.registerTask( 'default', ['wp_deploy'] );
   grunt.registerTask( 'minify', [ 'uglify', 'cssmin' ] );
   grunt.registerTask( 'version_number', [ 'replace:readme_txt', 'replace:plugin_file' ] );
-  grunt.registerTask( 'pre_vcs', [ 'version_number', 'makepot', 'addtextdomain' ] );
+  grunt.registerTask( 'pre_vcs', [ 'version_number', 'addtextdomain' ] );
   grunt.registerTask( 'gitattributes', [ 'file-creator' ] );
 
   grunt.registerTask( 'do_svn', [ 'svn_export', 'copy:svn_trunk', 'copy:svn_tag', 'copy:svn_assets', 'push_svn' ] );
