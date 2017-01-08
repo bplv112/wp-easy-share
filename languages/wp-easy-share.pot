@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Easy Share 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wes\n"
-"POT-Creation-Date: 2017-01-08 06:01:45+00:00\n"
+"POT-Creation-Date: 2017-01-08 06:25:11+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,177 +13,93 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
 
+#: admin/class-wes-admin-display.php:53
+msgid "WP Easy Social Share"
+msgstr ""
+
 #: admin/class-wes-admin-display.php:75
-#: build/make_svn/tags/1.0.0/admin/class-wes-admin-display.php:75
-#: build/make_svn/trunk/admin/class-wes-admin-display.php:75
-#: build/wp-easy-share/tags/1.0.0/admin/class-wes-admin-display.php:75
-#: build/wp-easy-share/trunk/admin/class-wes-admin-display.php:75
 msgid "WP Easy Share Settings"
 msgstr ""
 
 #: admin/class-wes-admin-display.php:87
-#: build/make_svn/tags/1.0.0/admin/class-wes-admin-display.php:87
-#: build/make_svn/trunk/admin/class-wes-admin-display.php:87
-#: build/wp-easy-share/tags/1.0.0/admin/class-wes-admin-display.php:87
-#: build/wp-easy-share/trunk/admin/class-wes-admin-display.php:87
 msgid "Basic Settings"
 msgstr ""
 
 #: admin/class-wes-admin-display.php:93
-#: build/make_svn/tags/1.0.0/admin/class-wes-admin-display.php:93
-#: build/make_svn/trunk/admin/class-wes-admin-display.php:93
-#: build/wp-easy-share/tags/1.0.0/admin/class-wes-admin-display.php:93
-#: build/wp-easy-share/trunk/admin/class-wes-admin-display.php:93
 msgid "Advanced"
 msgstr ""
 
 #: admin/class-wes-admin-display.php:99 admin/partials/wes-layout-tab.php:20
-#: build/make_svn/tags/1.0.0/admin/class-wes-admin-display.php:99
-#: build/make_svn/tags/1.0.0/admin/partials/wes-layout-tab.php:20
-#: build/make_svn/trunk/admin/class-wes-admin-display.php:99
-#: build/make_svn/trunk/admin/partials/wes-layout-tab.php:20
-#: build/wp-easy-share/tags/1.0.0/admin/class-wes-admin-display.php:99
-#: build/wp-easy-share/tags/1.0.0/admin/partials/wes-layout-tab.php:20
-#: build/wp-easy-share/trunk/admin/class-wes-admin-display.php:99
-#: build/wp-easy-share/trunk/admin/partials/wes-layout-tab.php:20
 msgid "Layout Settings"
 msgstr ""
 
 #: admin/class-wes-admin-display.php:301
-#: build/make_svn/tags/1.0.0/admin/class-wes-admin-display.php:301
-#: build/make_svn/trunk/admin/class-wes-admin-display.php:301
-#: build/wp-easy-share/tags/1.0.0/admin/class-wes-admin-display.php:301
-#: build/wp-easy-share/trunk/admin/class-wes-admin-display.php:301
 msgid "No settings Found, please make sure the params are passed correctly."
 msgstr ""
 
 #: admin/partials/wes-adv-tab.php:24
-#: build/make_svn/tags/1.0.0/admin/partials/wes-adv-tab.php:24
-#: build/make_svn/trunk/admin/partials/wes-adv-tab.php:24
-#: build/wp-easy-share/tags/1.0.0/admin/partials/wes-adv-tab.php:24
-#: build/wp-easy-share/trunk/admin/partials/wes-adv-tab.php:24
 msgid "Select Display Options"
 msgstr ""
 
 #: admin/partials/wes-adv-tab.php:29
-#: build/make_svn/tags/1.0.0/admin/partials/wes-adv-tab.php:29
-#: build/make_svn/trunk/admin/partials/wes-adv-tab.php:29
-#: build/wp-easy-share/tags/1.0.0/admin/partials/wes-adv-tab.php:29
-#: build/wp-easy-share/trunk/admin/partials/wes-adv-tab.php:29
 msgid "Enable social share"
 msgstr ""
 
 #: admin/partials/wes-adv-tab.php:38
-#: build/make_svn/tags/1.0.0/admin/partials/wes-adv-tab.php:38
-#: build/make_svn/trunk/admin/partials/wes-adv-tab.php:38
-#: build/wp-easy-share/tags/1.0.0/admin/partials/wes-adv-tab.php:38
-#: build/wp-easy-share/trunk/admin/partials/wes-adv-tab.php:38
 msgid "Allow social share for all posts"
 msgstr ""
 
 #: admin/partials/wes-adv-tab.php:47
-#: build/make_svn/tags/1.0.0/admin/partials/wes-adv-tab.php:47
-#: build/make_svn/trunk/admin/partials/wes-adv-tab.php:47
-#: build/wp-easy-share/tags/1.0.0/admin/partials/wes-adv-tab.php:47
-#: build/wp-easy-share/trunk/admin/partials/wes-adv-tab.php:47
 msgid "Select Post type"
 msgstr ""
 
 #: admin/partials/wes-adv-tab.php:61
-#: build/make_svn/tags/1.0.0/admin/partials/wes-adv-tab.php:61
-#: build/make_svn/trunk/admin/partials/wes-adv-tab.php:61
-#: build/wp-easy-share/tags/1.0.0/admin/partials/wes-adv-tab.php:61
-#: build/wp-easy-share/trunk/admin/partials/wes-adv-tab.php:61
 msgid "Enable fontawesome"
 msgstr ""
 
 #: admin/partials/wes-adv-tab.php:70
-#: build/make_svn/tags/1.0.0/admin/partials/wes-adv-tab.php:70
-#: build/make_svn/trunk/admin/partials/wes-adv-tab.php:70
-#: build/wp-easy-share/tags/1.0.0/admin/partials/wes-adv-tab.php:70
-#: build/wp-easy-share/trunk/admin/partials/wes-adv-tab.php:70
 msgid "Share in new tab"
 msgstr ""
 
 #: admin/partials/wes-basic-tab.php:23
-#: build/make_svn/tags/1.0.0/admin/partials/wes-basic-tab.php:23
-#: build/make_svn/trunk/admin/partials/wes-basic-tab.php:23
-#: build/wp-easy-share/tags/1.0.0/admin/partials/wes-basic-tab.php:23
-#: build/wp-easy-share/trunk/admin/partials/wes-basic-tab.php:23
 msgid "Social Media Selector"
 msgstr ""
 
 #: admin/partials/wes-basic-tab.php:26
-#: build/make_svn/tags/1.0.0/admin/partials/wes-basic-tab.php:26
-#: build/make_svn/trunk/admin/partials/wes-basic-tab.php:26
-#: build/wp-easy-share/tags/1.0.0/admin/partials/wes-basic-tab.php:26
-#: build/wp-easy-share/trunk/admin/partials/wes-basic-tab.php:26
 msgid ""
 "Here you can enable/disable sharing option for different social media. You "
 "can also set the order of the social icons, drag and drop to sort the order"
 msgstr ""
 
 #: admin/partials/wes-layout-tab.php:24
-#: build/make_svn/tags/1.0.0/admin/partials/wes-layout-tab.php:24
-#: build/make_svn/trunk/admin/partials/wes-layout-tab.php:24
-#: build/wp-easy-share/tags/1.0.0/admin/partials/wes-layout-tab.php:24
-#: build/wp-easy-share/trunk/admin/partials/wes-layout-tab.php:24
 msgid "Social Share title"
 msgstr ""
 
 #: admin/partials/wes-layout-tab.php:28
-#: build/make_svn/tags/1.0.0/admin/partials/wes-layout-tab.php:28
-#: build/make_svn/trunk/admin/partials/wes-layout-tab.php:28
-#: build/wp-easy-share/tags/1.0.0/admin/partials/wes-layout-tab.php:28
-#: build/wp-easy-share/trunk/admin/partials/wes-layout-tab.php:28
 msgid "Social Share align"
 msgstr ""
 
 #: admin/partials/wes-layout-tab.php:31
-#: build/make_svn/tags/1.0.0/admin/partials/wes-layout-tab.php:31
-#: build/make_svn/trunk/admin/partials/wes-layout-tab.php:31
-#: build/wp-easy-share/tags/1.0.0/admin/partials/wes-layout-tab.php:31
-#: build/wp-easy-share/trunk/admin/partials/wes-layout-tab.php:31
 msgid "Left"
 msgstr ""
 
 #: admin/partials/wes-layout-tab.php:35
-#: build/make_svn/tags/1.0.0/admin/partials/wes-layout-tab.php:35
-#: build/make_svn/trunk/admin/partials/wes-layout-tab.php:35
-#: build/wp-easy-share/tags/1.0.0/admin/partials/wes-layout-tab.php:35
-#: build/wp-easy-share/trunk/admin/partials/wes-layout-tab.php:35
 msgid "Center"
 msgstr ""
 
 #: admin/partials/wes-layout-tab.php:39
-#: build/make_svn/tags/1.0.0/admin/partials/wes-layout-tab.php:39
-#: build/make_svn/trunk/admin/partials/wes-layout-tab.php:39
-#: build/wp-easy-share/tags/1.0.0/admin/partials/wes-layout-tab.php:39
-#: build/wp-easy-share/trunk/admin/partials/wes-layout-tab.php:39
 msgid "Right"
 msgstr ""
 
 #: admin/partials/wes-layout-tab.php:43
-#: build/make_svn/tags/1.0.0/admin/partials/wes-layout-tab.php:43
-#: build/make_svn/trunk/admin/partials/wes-layout-tab.php:43
-#: build/wp-easy-share/tags/1.0.0/admin/partials/wes-layout-tab.php:43
-#: build/wp-easy-share/trunk/admin/partials/wes-layout-tab.php:43
 msgid "Select a template"
 msgstr ""
 
 #: admin/partials/wes-layout-tab.php:49
-#: build/make_svn/tags/1.0.0/admin/partials/wes-layout-tab.php:49
-#: build/make_svn/trunk/admin/partials/wes-layout-tab.php:49
-#: build/wp-easy-share/tags/1.0.0/admin/partials/wes-layout-tab.php:49
-#: build/wp-easy-share/trunk/admin/partials/wes-layout-tab.php:49
 msgid "Default"
 msgstr ""
 
 #: admin/partials/wes-layout-tab.php:56
-#: build/make_svn/tags/1.0.0/admin/partials/wes-layout-tab.php:56
-#: build/make_svn/trunk/admin/partials/wes-layout-tab.php:56
-#: build/wp-easy-share/tags/1.0.0/admin/partials/wes-layout-tab.php:56
-#: build/wp-easy-share/trunk/admin/partials/wes-layout-tab.php:56
 msgid "Layout One"
 msgstr ""
 
@@ -192,7 +108,7 @@ msgid "WP Easy Share"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "bplv.com.np/wp-easy-share"
+msgid "http://bplv.com.np/wp-easy-share"
 msgstr ""
 
 #. Description of the plugin/theme

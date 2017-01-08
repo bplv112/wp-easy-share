@@ -114,13 +114,6 @@ class Wes_Front{
         return $data;     
     }
 
-    public static function get_url($post_id){
-        $url = array();
-        
-
-        return $url;
-    }
-
     private function wes_is_allowed_post($id){
 
     	$post_type = get_post_type($id);

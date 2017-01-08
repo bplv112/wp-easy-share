@@ -25,7 +25,7 @@
 	</div>
 	<div class="wes-layout-wrap">
 		<div class= "wes-auto-code">
-			<i class="wes-help fa fa-question-circle" title="Enable social share"></i>
+			<i class="wes-help fa fa-question-circle" title="<?php _e('Enable social share','wp-easy-share'); ?>"></i>
 			<label class= "wes-switch-label"> <?php _e('Enable social share','wp-easy-share'); ?></label>
 			<label class="switch">
 	        	<input type="checkbox" class="switch-input" name="wes_disable_auto_code" value="1" <?php checked( wes_option('wes_disable_auto_code'), '1' ); ?>>
@@ -34,7 +34,7 @@
         	</label>
 		</div>
 		<div class="wes-all">
-			<i class="wes-help fa fa-question-circle" title="Disable to restrict share options to certain post types"></i>
+			<i class="wes-help fa fa-question-circle" title="<?php _e( 'Disable to restrict share options to certain post types','wp-easy-share'); ?>"></i>
 			<label class= "wes-switch-label"> <?php _e('Allow social share for all posts','wp-easy-share'); ?></label>
 			<label class="switch">
 	        	<input type="checkbox" id="allpost_allow" class="switch-input" name="wes_all_post_types" value="1" <?php checked( wes_option('wes_all_post_types'), '1' ); ?>>
@@ -43,7 +43,7 @@
         	</label>
 		</div>
 		<div class="wes-selected" id="wes_select_post">
-			<i class="wes-help fa fa-question-circle" title="Select post types"></i>
+			<i class="wes-help fa fa-question-circle" title="<?php _e('Select Post type','wp-easy-share');?>"></i>
 			<label class="wes-switch-label"><?php _e('Select Post type','wp-easy-share');?></label>
 			<select id="post-type-select" class= "wes-select" name="wes_select_post_types[]" multiple>
 	        	<?php foreach ($post_types as $key => $value) { ?>
@@ -57,7 +57,7 @@
 			</select>
 		</div>	
 		<div class= "fontawesome-disable">
-			<i class="wes-help fa fa-question-circle" title="Disable if your theme already loads fontawesome"></i>
+			<i class="wes-help fa fa-question-circle" title="<?php _e ('Disable if your theme already loads fontawesome','wp-easy-share'); ?>"></i>
 			<label class= "wes-switch-label"> <?php _e('Enable fontawesome','wp-easy-share'); ?></label>
 			<label class="switch">
 	        	<input type="checkbox" class="switch-input" name="wes_font_awesome" value="1" <?php checked( wes_option('wes_font_awesome'), '1' ); ?>>
@@ -66,7 +66,7 @@
         	</label>
 		</div>		
 		<div class= "wes-new-tab">
-			<i class="wes-help fa fa-question-circle" title="Disable to share in the sametab"></i>
+			<i class="wes-help fa fa-question-circle" title="<?php _e('Disable to share in the sametab', 'wp-easy-share');?>"></i>
 			<label class= "wes-switch-label"> <?php _e('Share in new tab','wp-easy-share'); ?></label>
 			<label class="switch">
 	        	<input type="checkbox" class="switch-input" name="wes_new_tab" value="1" <?php checked( wes_option('wes_new_tab'), '1' ); ?>>
