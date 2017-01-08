@@ -15,6 +15,10 @@ module.exports = function(grunt) {
     'index.php',
   ];
 
+  svn_assets_list = [
+    'assets/**',
+  ];
+
   /**
    * Let's add a couple of more files to github.
    * @type {Array}
@@ -23,7 +27,8 @@ module.exports = function(grunt) {
     '\.gitattributes',
     '\.gitignore',
     'Gruntfile.js',
-    'package.json'
+    'package.json',
+    'assets/**',
   ]);
 
   // Project configuration.
@@ -65,6 +70,14 @@ module.exports = function(grunt) {
         expand: true,
         src: svn_files_list,
         dest: 'build/<%= pkg.name %>/tags/<%= pkg.version %>/'
+      },     
+      svn_assets: {
+        options: {
+          mode: true
+        },
+        expand: true,
+        src: 'assets/**',
+        dest: 'build/<%= pkg.name %>/'
       }
     },
     gittag: {
@@ -215,7 +228,7 @@ module.exports = function(grunt) {
   grunt.registerTask( 'pre_vcs', [ 'version_number', 'makepot', 'addtextdomain' ] );
   grunt.registerTask( 'gitattributes', [ 'file-creator' ] );
 
-  grunt.registerTask( 'do_svn', [ 'svn_export', 'copy:svn_trunk', 'copy:svn_tag', 'push_svn' ] );
+  grunt.registerTask( 'do_svn', [ 'svn_export', 'copy:svn_trunk', 'copy:svn_tag', 'copy:svn_assets', 'push_svn' ] );
   grunt.registerTask( 'do_git', [  'gitcommit', 'gittag', 'gitpush' ] );
   grunt.registerTask( 'release', [ 'pre_vcs', 'do_svn' ] );
   grunt.registerTask( 'post_release', [ 'do_git', 'clean:post_build' ] );

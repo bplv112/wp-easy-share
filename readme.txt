@@ -28,7 +28,7 @@ If you have any question, suggestion or issue, please [post here](https://wordpr
 
 == Installation ==
 
-1. Upload `wes.php` to the `/wp-content/plugins/` directory
+1. Upload `wp-easy-share` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. For customizing the plugin's settings, click on WP Easy Social Share menu in Wordpress left admin menu. 
 
@@ -44,7 +44,7 @@ No , you won't need to get any trouble regarding design and layout of the icons 
 
 = There is something cool you could add... =
 
-Nice, make a post on the [Support Forum](http://wordpress.org/support/plugin/wp-easy-share "WP Child Theme Generator Support") and let us know.
+Nice, make a post on the [Support Forum](http://wordpress.org/support/plugin/wp-easy-share "WP Easy Share Support") and let us know.
 
 == Screenshots ==
 1. Backend Section of WP Social Share
@@ -55,12 +55,6 @@ Nice, make a post on the [Support Forum](http://wordpress.org/support/plugin/wp-
 
 = 1.0 =
 * Initial release
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above.  This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation."  Arbitrary sections will be shown below the built-in sections outlined above.
 
 
 == Upgrade Notice ==

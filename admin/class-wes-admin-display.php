@@ -50,7 +50,7 @@
         // This page will be under "Settings"
         add_menu_page(
             'Settings Admin', 
-            'WP Easy Social Share', 
+            __('WP Easy Social Share','wp-easy-share'), 
             'manage_options', 
             'social-share-settings', 
             array( $this, 'create_admin_page' ),

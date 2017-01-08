@@ -14,7 +14,7 @@
  *
  * @wordpress-plugin
  * Plugin Name:       WP Easy Share
- * Plugin URI:        bplv.com.np/wp-easy-share
+ * Plugin URI:        http://bplv.com.np/wp-easy-share
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
  * Version:           1.0.0
  * Author:            Biplav Subedi
