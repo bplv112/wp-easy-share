@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bplv112/wes.git"
+    "url": "git+https://github.com/bplv112/wp-easy-share.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bplv112/wes/issues"
+    "url": "https://github.com/bplv112/wp-easy-share/issues"
   },
-  "homepage": "https://github.com/bplv112/wes#readme",
+  "homepage": "https://github.com/bplv112/wp-easy-share#readme",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-check-dependencies": "^1.0.0",
