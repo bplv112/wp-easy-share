@@ -7,7 +7,6 @@ module.exports = function(grunt) {
   svn_files_list = [
     'admin/**',
     'includes/**',
-    'languages/**',
     'public/**',
     '<%= pkg.main %>',
     'readme.txt',
