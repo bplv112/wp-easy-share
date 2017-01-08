@@ -26,7 +26,9 @@
         $new_tab = wes_option('wes_new_tab') == 1 ? 'target = _blank' : '';
 ?>
 <div id="social-platforms">
+<?php if( !empty( wes_option('wes_social_title') ) ): ?>
 <h3><?php echo esc_html(wes_option('wes_social_title')); ?></h3>
+<?php endif; ?>
 	<ul class="wes-social-icons">
 		<?php foreach ($order as $key => $value) { ?>
 			<?php if(array_key_exists($value, $enabled)){ ?>

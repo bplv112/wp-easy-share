@@ -55,6 +55,7 @@
 				</label> 
 				<span><?php _e('Layout One', 'wp-easy-share' ); ?></span>
 			</div>
+			<?php apply_filters('additional_layout', 'additional_layouts'); ?>
 		</div>
 	</div>
 </div>

@@ -28,9 +28,11 @@
   <div class="wes-container clearfix">
     <div class="btn-group">
         <ul class="wes-layout-one">
+        <?php if( !empty( wes_option('wes_social_title') ) ): ?>
             <li class="wes-layout-one-list">
                 <button class="wes-disabled-btn"><?php echo esc_html(wes_option('wes_social_title')); ?></button>
             </li>
+        <?php endif; ?>
             <?php foreach ($order as $key => $value) { ?>
             <?php if(array_key_exists($value, $enabled)){ ?>
             <li class="wes-layout-one-list">
