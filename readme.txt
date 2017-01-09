@@ -4,7 +4,7 @@ Donate link: bplv.com.np
 Tags: social share counter, social share, social media share, social network share, social media, social network, share counter, social share count, social url share, social icons
 Requires at least: 4.5
 Tested up to: 4.7
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -55,6 +55,9 @@ Nice, make a post on the [Support Forum](http://wordpress.org/support/plugin/wp-
 
 = 1.0 =
 * Initial release
+
+= 1.1.0 =
+* Minor bug fixes
 
 
 == Upgrade Notice ==
