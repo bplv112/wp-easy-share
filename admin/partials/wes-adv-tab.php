@@ -66,7 +66,7 @@
         	</label>
 		</div>		
 		<div class= "wes-new-tab">
-			<i class="wes-help fa fa-question-circle" title="<?php _e('Disable to share in the sametab', 'wp-easy-share');?>"></i>
+			<i class="wes-help fa fa-question-circle" title="<?php _e('Disable to share in the same tab', 'wp-easy-share');?>"></i>
 			<label class= "wes-switch-label"> <?php _e('Share in new tab','wp-easy-share'); ?></label>
 			<label class="switch">
 	        	<input type="checkbox" class="switch-input" name="wes_new_tab" value="1" <?php checked( wes_option('wes_new_tab'), '1' ); ?>>

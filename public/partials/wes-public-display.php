@@ -17,8 +17,8 @@
 
 
 <?php 
-		$order = wes_option('wes_social_order');  
-		$enabled= wes_option('wes_enable_social'); 
+		$enabled = !empty(wes_option('wes_enable_social')) ? wes_option('wes_enable_social') : $default['wes_enable_social'];
+    	$order = !empty(wes_option('wes_social_order')) ? wes_option('wes_social_order') : $default['wes_social_order'];
 		$perm = get_permalink($post_id);
         $title = get_the_title($post_id);
         $excerpt = get_the_excerpt($post_id);
@@ -30,12 +30,14 @@
 <h3><?php echo esc_html(wes_option('wes_social_title')); ?></h3>
 <?php endif; ?>
 	<ul class="wes-social-icons">
-		<?php foreach ($order as $key => $value) { ?>
-			<?php if(array_key_exists($value, $enabled)){ ?>
-				<li class="wes-icon-list">
-					<a class="btn btn-icon btn-<?php echo esc_attr(($value)); ?>" href="<?php echo esc_html($url[$value]);?>" <?php echo $new_tab; ?> ><i class="fa fa-<?php echo esc_attr($value); ?>"></i></a>
-				</li>
-			<?php
+		<?php if (!empty($order) ){ ?>
+			<?php foreach ($order as $key => $value) { ?>
+				<?php if(array_key_exists($value, $enabled)){ ?>
+					<li class="wes-icon-list">
+						<a class="btn btn-icon btn-<?php echo esc_attr(($value)); ?>" href="<?php echo esc_html($url[$value]);?>" <?php echo $new_tab; ?> ><i class="fa fa-<?php echo esc_attr($value); ?>"></i></a>
+					</li>
+				<?php
+				}
 			}
 		}
 		?>

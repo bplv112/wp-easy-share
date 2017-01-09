@@ -16,9 +16,10 @@
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
 
 
-<?php 
-    $order = wes_option('wes_social_order');  
-    $enabled= wes_option('wes_enable_social'); 
+<?php
+    $default = wes_default_option();
+    $enabled = !empty(wes_option('wes_enable_social')) ? wes_option('wes_enable_social') : $default['wes_enable_social'];
+    $order = !empty(wes_option('wes_social_order')) ? wes_option('wes_social_order') : $default['wes_social_order'];
     $perm = get_permalink($post_id);
     $title = get_the_title($post_id);
     $excerpt = get_the_excerpt($post_id);
@@ -33,13 +34,15 @@
                 <button class="wes-disabled-btn"><?php echo esc_html(wes_option('wes_social_title')); ?></button>
             </li>
         <?php endif; ?>
+        <?php if (!empty($order) ){ ?>
             <?php foreach ($order as $key => $value) { ?>
-            <?php if(array_key_exists($value, $enabled)){ ?>
-            <li class="wes-layout-one-list">
-                <a class="btn" href="<?php echo esc_html($url[$value]);?>" <?php echo $new_tab; ?>><i class="fa fa-<?php echo esc_attr(($value)); ?>"></i></a> 
-            </li>
+                <?php if(array_key_exists($value, $enabled)){ ?>
+                    <li class="wes-layout-one-list">
+                        <a class="btn" href="<?php echo esc_html($url[$value]);?>" <?php echo $new_tab; ?>><i class="fa fa-<?php echo esc_attr(($value)); ?>"></i></a> 
+                    </li>
+                <?php } ?>
             <?php } ?>
-            <?php } ?>
+        <?php } ?>
         </ul>
     </div>
 </div>
