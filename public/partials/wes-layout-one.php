@@ -18,8 +18,8 @@
 
 <?php
     $default = wes_default_option();
-    $enabled = wes_option('wes_enable_social') != NULL ? wes_option('wes_enable_social') : $default['wes_enable_social'];
-    $order = wes_option('wes_social_order') != NULL ? wes_option('wes_social_order') : $default['wes_social_order'];
+    $enabled = NULL != wes_option('wes_enable_social')  ? wes_option('wes_enable_social') : $default['wes_enable_social'];
+    $order = NULL != wes_option('wes_social_order')  ? wes_option('wes_social_order') : $default['wes_social_order'];
     $perm = get_permalink($post_id);
     $title = get_the_title($post_id);
     $excerpt = get_the_excerpt($post_id);
@@ -29,7 +29,7 @@
   <div class="wes-container clearfix">
     <div class="btn-group">
         <ul class="wes-layout-one">
-        <?php if( !empty( wes_option('wes_social_title') ) ): ?>
+        <?php if( NULL != wes_option('wes_social_title') ):?>
             <li class="wes-layout-one-list">
                 <button class="wes-disabled-btn"><?php echo esc_html(wes_option('wes_social_title')); ?></button>
             </li>
