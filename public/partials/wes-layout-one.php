@@ -18,8 +18,8 @@
 
 <?php
     $default = wes_default_option();
-    $enabled = !empty(wes_option('wes_enable_social')) ? wes_option('wes_enable_social') : $default['wes_enable_social'];
-    $order = !empty(wes_option('wes_social_order')) ? wes_option('wes_social_order') : $default['wes_social_order'];
+    $enabled = wes_option('wes_enable_social') != NULL ? wes_option('wes_enable_social') : $default['wes_enable_social'];
+    $order = wes_option('wes_social_order') != NULL ? wes_option('wes_social_order') : $default['wes_social_order'];
     $perm = get_permalink($post_id);
     $title = get_the_title($post_id);
     $excerpt = get_the_excerpt($post_id);

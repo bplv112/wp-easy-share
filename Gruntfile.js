@@ -135,7 +135,7 @@ module.exports = function(grunt) {
         }]
       },
       'plugin_file': {
-        src: [ '<%= pkg.main_file %>' ],
+        src: [ '<%= pkg.main %>' ],
         overwrite: true,
         replacements: [{
           from: /\*\s*Version:\s*(.*)/,

@@ -13,9 +13,9 @@
  */
 
   $default = wes_default_option();
-  $wes_social = !empty(wes_option('wes_enable_social')) ? wes_option('wes_enable_social') : $default['wes_enable_social'];
-  $wes_icon = !empty(wes_option('wes_social_fields')) ? wes_option('wes_social_fields') : $default['wes_social_fields'];
-  $order = !empty(wes_option('wes_social_order')) ? wes_option('wes_social_order') : $default['wes_social_order'];
+  $wes_social = wes_option('wes_enable_social')!= NULL ? wes_option('wes_enable_social') : $default['wes_enable_social'];
+  $wes_icon = wes_option('wes_social_fields')!= NULL ? wes_option('wes_social_fields') : $default['wes_social_fields'];
+  $order = wes_option('wes_social_order')!= NULL ? wes_option('wes_social_order') : $default['wes_social_order'];
 ?>
 
 <div class="wes-social-networks" id="wes-social">
