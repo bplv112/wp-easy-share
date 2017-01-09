@@ -39,7 +39,7 @@ class Wes_Front{
     		exit;
     	}
     	else{
-                if(  NULL != array_filter( wes_option('wes_enable_social') )  ){
+                if(  NULL != array_filter( wes_option('wes_enable_social') ) && is_single() ){
 
                     $template = wes_option('wes_template') ;
         			$content .= self::wes_content( $post_id, esc_html($template)); 

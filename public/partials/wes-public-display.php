@@ -16,7 +16,7 @@
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
 
 
-<?php 
+<?php
 $enabled =  NULL!= wes_option('wes_enable_social')  ? wes_option('wes_enable_social') : $default['wes_enable_social'];
 $order = NULL!= wes_option('wes_social_order') ? wes_option('wes_social_order') : $default['wes_social_order'];
 $perm = get_permalink($post_id);

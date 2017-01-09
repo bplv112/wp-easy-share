@@ -17,6 +17,7 @@
 
 
 <?php
+
     $default = wes_default_option();
     $enabled = NULL != wes_option('wes_enable_social')  ? wes_option('wes_enable_social') : $default['wes_enable_social'];
     $order = NULL != wes_option('wes_social_order')  ? wes_option('wes_social_order') : $default['wes_social_order'];
