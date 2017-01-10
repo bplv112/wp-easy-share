@@ -15,10 +15,10 @@
  * @wordpress-plugin
  * Plugin Name:       WP Easy Share
  * Plugin URI:        http://bplv.com.np/wp-easy-share
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       WP Easy Share is your ultimate solution to your need of adding social share feature on your theme.
  * Version:         1.1.0
  * Author:            Biplav Subedi
- * Author URI:        bplv.com.np
+ * Author URI:        http://bplv.com.np
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       wp-easy-share
