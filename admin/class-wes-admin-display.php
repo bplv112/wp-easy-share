@@ -48,7 +48,7 @@
 	public function add_plugin_page()
     {
         // This page will be under "Settings"
-        add_menu_page(
+        $my_page = add_menu_page(
             'Settings Admin', 
             __('WP Easy Social Share','wp-easy-share'), 
             'manage_options', 
@@ -57,8 +57,18 @@
             '',
             80
         );
+        add_action( 'load-' . $my_page, array( $this,'load_admin_js' ) );
+
     }
 
+    public function load_admin_js(){
+       
+        add_action( 'admin_enqueue_scripts', array( $this,'enqueue_admin_js' ) );
+    }
+
+    public function enqueue_admin_js(){
+        wp_enqueue_script( 'wes-select2', plugin_dir_url( __FILE__ ) . 'js/select2.js', array( 'jquery'), '', false );
+    }
 
     /**
      * Options page callback
